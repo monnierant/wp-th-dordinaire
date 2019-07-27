@@ -1,0 +1,29 @@
+/*!
+Theme Name: DorDineAire
+Theme URI: 
+Author: Antoine Monnier
+Version: 1.0
+Tags: nature
+Text Domain: DorDineAire
+*/
+
+@import 'sass/bootstrap-custom';
+
+
+body {
+    background: url('img/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#navigation {
+    margin-top: 2em;
+}
+
+#content {
+    margin-top: 8em;
+}
+
+
