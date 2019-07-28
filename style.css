@@ -11389,7 +11389,7 @@ button.bg-dark:focus {
 }
 
 /* line 45, sass/sass/bootstrap/utilities/_text.scss */
-.text-white {
+.text-white, #footer-menu, #footer-menu a {
   color: #fff !important;
 }
 
@@ -11489,7 +11489,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* line 55, sass/sass/bootstrap/utilities/_text.scss */
-.text-white-50 {
+.text-white-50, #footer-menu .sub-menu li, #footer-menu .sub-menu li a {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
@@ -11653,9 +11653,39 @@ body {
 /* line 21, sass/style.scss */
 #navigation {
   margin-top: 2em;
+  padding-top: 0em;
+  padding-bottom: 0em;
 }
 
-/* line 25, sass/style.scss */
+/* line 27, sass/style.scss */
 #content {
   margin-top: 8em;
+}
+
+/* line 31, sass/style.scss */
+#logo {
+  height: 5rem;
+}
+
+/* line 35, sass/style.scss */
+#footer-menu {
+  text-align: center;
+}
+/* line 39, sass/style.scss */
+#footer-menu ul {
+  list-style-type: none;
+}
+/* line 42, sass/style.scss */
+#footer-menu a {
+  text-decoration: underline;
+}
+/* line 46, sass/style.scss */
+#footer-menu .sub-menu {
+  list-style-type: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
+/* line 52, sass/style.scss */
+#footer-menu .sub-menu li a {
+  text-decoration: none;
 }

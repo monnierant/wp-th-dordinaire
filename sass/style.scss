@@ -20,10 +20,39 @@ body {
 
 #navigation {
     margin-top: 2em;
+    padding-top: 0em;
+    padding-bottom: 0em;
 }
 
 #content {
     margin-top: 8em;
 }
 
+#logo {
+    height: 5rem;
+}
 
+#footer-menu {
+    
+    @extend .text-white;
+    text-align: center;
+    ul {
+        list-style-type: none;
+    }
+    a {
+        @extend .text-white;
+        text-decoration: underline;
+    }
+    .sub-menu {
+        list-style-type: none;
+        padding-left: 0px;
+        text-decoration: none;
+        li {
+            @extend .text-white-50;
+            a {
+                @extend .text-white-50;
+                text-decoration: none;
+            }
+        }
+    }
+}

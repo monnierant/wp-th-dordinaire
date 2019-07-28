@@ -15,7 +15,21 @@
     <!-- Navigation -->
     <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5 shadow">
         <div class="container">
-            <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+            <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                <?php
+                if (get_theme_mod('dordinaire_logo_img_settings') != '') {
+                    ?>
+                    <img id="logo" src="<?php echo get_theme_mod('dordinaire_logo_img_settings'); ?>" class="img-fluid" alt="Responsive image">
+                <?php
+                } else {
+                    bloginfo('name');
+                }
+                ?>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <?php
