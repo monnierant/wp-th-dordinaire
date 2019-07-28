@@ -10,41 +10,56 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
 
-    <!-- Navigation -->
-    <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5 shadow">
-        <div class="container">
-            <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <?php
-                if (get_theme_mod('dordinaire_logo_img_settings') != '') {
+<?php
+if (get_theme_mod('dordinaire_bg_img_settings') != '') {
+    ?>
+
+    <body style="background: url('<?php echo get_theme_mod('dordinaire_bg_img_settings'); ?>') no-repeat center center fixed;">
+    <?php
+    } else {
+        ?>
+
+        <body>
+        <?php
+        }
+        ?>
+
+
+
+        <!-- Navigation -->
+        <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5 shadow">
+            <div class="container">
+                <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                    <?php
+                    if (get_theme_mod('dordinaire_logo_img_settings') != '') {
+                        ?>
+                        <img id="logo" src="<?php echo get_theme_mod('dordinaire_logo_img_settings'); ?>" class="img-fluid" alt="Responsive image">
+                    <?php
+                    } else {
+                        bloginfo('name');
+                    }
                     ?>
-                    <img id="logo" src="<?php echo get_theme_mod('dordinaire_logo_img_settings'); ?>" class="img-fluid" alt="Responsive image">
-                <?php
-                } else {
-                    bloginfo('name');
-                }
-                ?>
 
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'Top',
-                    'depth'              => 2, // 1 = no dropdowns, 2 = with dropdowns.
-                    'container'       => 'div',
-                    'container_class' => 'collapse navbar-collapse',
-                    'container_id'    => 'navbarResponsive',
-                    'menu_class'      => 'navbar-nav ml-auto',
-                    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'          => new WP_Bootstrap_Navwalker(),
-                ));
-                ?>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'Top',
+                        'depth'              => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                        'container'       => 'div',
+                        'container_class' => 'collapse navbar-collapse',
+                        'container_id'    => 'navbarResponsive',
+                        'menu_class'      => 'navbar-nav ml-auto',
+                        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'          => new WP_Bootstrap_Navwalker(),
+                    ));
+                    ?>
 
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
